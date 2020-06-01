@@ -1,0 +1,42 @@
+{
+  "name": "@hekojs/audio",
+  "version": "0.0.1",
+  "description": "Heko audio",
+  "main": "lib/",
+  "scripts": {
+    "test": "standard && flow && jest",
+    "watch": "babel ./src --watch --out-dir ./lib",
+    "build": "babel ./src --out-dir ./lib",
+    "relink": "npm link @hekojs/core"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hekojs/audio.git"
+  },
+  "author": "Anael Favre",
+  "license": "MIT",
+  "dependencies": {
+    "howler": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "babel-plugin-module-resolver": "^4.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ]
+  }
+}
